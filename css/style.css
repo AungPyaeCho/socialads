@@ -173,7 +173,7 @@ a:focus {
 .slider_section .slider_container {
   background-image: url(../images/slider-bg.jpg);
   background-size: cover;
-  color: #e600ff;
+  color: #ffffff;
   padding: 25px 0;
 }
 
@@ -316,7 +316,7 @@ a:focus {
 
 
 .service_section .detail-container .detail-box {
-  background-color: #f6b6ff;
+  background-color: #e600ff;
   color: #030f00;
   text-align: center;
   text-transform: uppercase;
