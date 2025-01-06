@@ -1,7 +1,7 @@
 body {
   font-family: "fredoka",
- sans-serif;
-  color: #e600ff;
+sans-serif;
+  color: #f6b6ff;
   background-color: #ffffff;
 }
 
@@ -62,13 +62,23 @@ body {
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff, #2424ff);
+  background-size: 200% 200%;
+  animation: gradient-animation 6s ease infinite;
+  color: #fff; /* Adjust text color for contrast */
 }
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 .header_section .nav_container {
   margin: 0 auto;
+  
 }
-
-
 
 a,
 a:hover,
@@ -91,7 +101,7 @@ a:focus {
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
   padding: 10px 30px;
   margin: 0 15px;
-  color: #e600ff; /* Neutral */
+  color: #ffffff; /* Neutral */
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -99,7 +109,7 @@ a:focus {
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link, 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
-  background-color: #e600ff; /* Dark 1 */
+  background-color: #f6b6ff; /* Dark 1 */
   color: #ffffff; /* Contrast */
 }
 
@@ -108,7 +118,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
-  color: #e600ff; /* Bold */
+  color: #f6b6ff; /* Bold */
 }
 
 .custom_nav-container .nav_search-btn {
@@ -171,10 +181,21 @@ a:focus {
 }
 
 .slider_section .slider_container {
-  background-image: url(../images/slider-bg.jpg);
-  background-size: cover;
-  color: #ffffff;
+  /* Commented out the background image */
+  /* background-image: url(../images/slider-bg.jpg); */
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff, #2424ff);
+  background-size: 200% 200%;
+  animation: gradient-animation 6s ease infinite;
+  background-blend-mode: multiply;
+  color: #120014; /* Text color for contrast */
   padding: 25px 0;
+}
+
+/* Reuse the same animation for consistency */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .slider_section .row {
@@ -192,26 +213,33 @@ a:focus {
   padding-left: 45px;
 }
 
+/* Font Colors Matching the Gradient */
 .slider_section .detail-box h1 {
   font-weight: bold;
   font-size: 4rem;
   text-transform: uppercase;
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff, #2424ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Button Styling with Gradient Hover */
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffffff;
-  color: #e600ff;
-  border: 1.5px solid #ffffff;
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff);
+  color: #ffffff;
+  border: 1.5px solid #f6b6ff;
   border-radius: 5px;
   margin-top: 25px;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .slider_section .detail-box a:hover {
-  background-color: #19ff00;
-  color: #120014;
+  background: linear-gradient(135deg, #8f2eff, #2424ff);
+  color: #ffffff;
+  border-color: #8f2eff;
 }
 
 .slider_section .carousel-indicators {
@@ -236,32 +264,38 @@ a:focus {
   width: auto;
   height: auto;
   display: none;
-  color: #1b1b1b;
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .slider_section .carousel-indicators li.active {
   display: block;
+  color: #f6b6ff;
 }
 
+/* Carousel Button Gradient */
 .slider_section .carousel_btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background-color: #ffffff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: linear-gradient(135deg, #8f2eff, #2424ff);
+  align-items: center;
   position: absolute;
   bottom: -25px;
   right: 10%;
   padding: 7px 10px;
   border-radius: 5px 5px 0 0;
+  transition: background 0.3s ease;
+}
+
+.slider_section .carousel_btn-box:hover {
+  background: linear-gradient(135deg, #f6b6ff, #8f2eff);
 }
 
 .slider_section .carousel_btn-box img {
   margin: 0 10px;
 }
 
+/* Carousel Control Styling */
 .slider_section .carousel_btn-box .carousel-control-prev,
 .slider_section .carousel_btn-box .carousel-control-next {
   position: unset;
@@ -316,8 +350,8 @@ a:focus {
 
 
 .service_section .detail-container .detail-box {
-  background-color: #e600ff;
-  color: #030f00;
+  background-color: #f6b6ff;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   flex: 1 1 calc(33.333% - 30px);
@@ -357,9 +391,9 @@ a:focus {
 .service_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #e600ff;
+  background-color: #f6b6ff;
   color: #120014;
-  border: 1.5px solid #e600ff;
+  border: 1.5px solid #f6b6ff;
   border-radius: 5px;
 }
 
@@ -642,9 +676,9 @@ a:focus {
 .started_section .btn-box a {
   display: inline-block;
   padding: 14px 75px;
-  background-color: #e600ff;
+  background-color: #f6b6ff;
   color: #120014;
-  border: 1.5px solid #e600ff;
+  border: 1.5px solid #f6b6ff;
   border-radius: 5px;
   text-transform: uppercase;
 }
@@ -682,9 +716,9 @@ a:focus {
 .agency_section .agency_container .box .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #e600ff;
+  background-color: #f6b6ff;
   color: #120014;
-  border: 1.5px solid #e600ff;
+  border: 1.5px solid #f6b6ff;
   border-radius: 5px;
   margin-top: 45px;
 }
@@ -756,9 +790,9 @@ a:focus {
 .contact_section button {
   display: inline-block;
   padding: 12px 45px;
-  background-color: #e600ff;
+  background-color: #f6b6ff;
   color: #120014;
-  border: 1.5px solid #e600ff;
+  border: 1.5px solid #f6b6ff;
   border-radius: 0;
   display: block;
   color: #fff;
@@ -767,7 +801,7 @@ a:focus {
 
 .contact_section button:hover {
   background-color: transparent;
-  color: #e600ff;
+  color: #f6b6ff;
 }
 
 .contact_section .map_container {
@@ -835,7 +869,7 @@ a:focus {
   height: 31px;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
           clip-path: polygon(0 0, 0% 100%, 100% 0);
-  background-color: #e600ff;
+  background-color: #f6b6ff;
   z-index: -1;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -939,7 +973,7 @@ a:focus {
   padding: 20px 0;
   margin: 0 auto;
   text-align: center;
-  border-top: 1.5px solid #e600ff;
+  border-top: 1.5px solid #f6b6ff;
   width: 80%;
 }
 
